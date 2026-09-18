@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日习惯与心情追踪器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 页面头部 -->
+        header>
+            <h1>🌟 每日追踪</h1>
+            <p id="current-date">今天是：加载中...</p>
+        </header>
+
+        <!-- 心情记录模块 -->
+        <section class="card mood-section">
+            <h2>今天的心情如何？</h2>
+            <div class="mood-options">
+                <button class="mood-btn" data-mood="😄">😄 开心</button>
+                <button class="mood-btn" data-mood="😌">😌 平静</button>
+                <button class="mood-btn" data-mood="😐">😐 一般</button>
+                <button class="mood-btn" data-mood="">😢 难过</button>
+                <button class="mood-btn" data-mood="🔥">🔥 充满动力</button>
+            </div>
+            <p id="selected-mood-display">今日暂未记录心情</p>
+        </section>
+
+        <!-- 习惯打卡模块 -->
+        <section class="card habit-section">
+            <h2>今日习惯打卡</h2>
+            <!-- 添加新习惯表单 -->
+            <div class="habit-form">
+                <input type="text" id="habit-input" placeholder="输入新习惯（例如：早起、阅读30分钟）...">
+                <button id="add-habit-btn">添加习惯</button>
+            </div>
+            <!-- 习惯列表 -->
+            <ul id="habit-list">
+                <!-- 示例静态展示，后续由 JS 动态生成 -->
+                <li class="habit-item">
+                    <span>喝 8 杯水</span>
+                    <div class="habit-actions">
+                        <button class="check-btn">打卡</button>
+                        <button class="delete-btn">删除</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
